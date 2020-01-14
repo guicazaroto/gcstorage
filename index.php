@@ -9,7 +9,19 @@ $storage = new StorageClient([
 ]);
 
 // list all buckets 
-foreach ($storage->buckets() as $bucket) {
-    echo $bucket->name()
-     . "<br>";
-}
+// foreach ($storage->buckets() as $bucket) {
+//     echo $bucket->name()
+//      . "<br>";
+// }
+
+//List Cloud Storage bucket objects.
+// $bucket = $storage->bucket('sped-storage');
+// foreach ($bucket->objects() as $object) {
+//     printf('Object: %s' . PHP_EOL, $object->name());
+// }
+
+//Download file 
+// $bucket = $storage->bucket('sped-storage');
+// $object = $bucket->object('json_sped/padrao.json');
+// $object->downloadToFile(__DIR__. "/{$object->name()}" );
+
