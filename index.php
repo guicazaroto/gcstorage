@@ -25,21 +25,21 @@ $storage = new StorageClient([
 //     printf('Object: %s' . PHP_EOL, $object->name());
 // }
 
-//Download file 
-// $bucket = $storage->bucket('sped-storage');
-// $object = $bucket->object('json_sped/padrao.json');
+//Download file
+//  $bucket = $storage->bucket('sped-storage');
+//  $object = $bucket->object('json_sped/report.json');
 // echo $object->downloadAsStream(); //return content in browser
 // $object->downloadToFile(__DIR__. "/{$object->name()}" ); // save file in a folder
 
 
 
-// create a json file with reports content and then make upload in gc storage, finally delete temporary file 
-// $myfile = fopen("new_report.json", "w");
-// fwrite($myfile, '{"ex":"ample"}');
+//create a json file with reports content and then make upload in gc storage, finally delete temporary file
+$myfile = fopen("/var/tmp/new_report.json", "w");
+fwrite($myfile, '{"ex":"ample"}');
 
 // $file = fopen("new_report.json", 'r');
 // $bucket = $storage->bucket('sped-storage');
 // $object = $bucket->upload($file, [
-//     'name' => "json_sped/report.json"
+//     'name' => "json_sped/report_2.json"
 // ]);
-// unlink("new_report.json");
+// unlink("/var/tmp/new_report.json");
